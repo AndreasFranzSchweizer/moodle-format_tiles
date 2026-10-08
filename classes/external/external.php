@@ -30,7 +30,7 @@ use file_exception;
 use coding_exception;
 use moodle_exception;
 use required_capability_exception;
-use restricted_context_exception;
+use core_external\restricted_context_exception;
 use stored_file_creation_exception;
 use context_module;
 use context_course;
