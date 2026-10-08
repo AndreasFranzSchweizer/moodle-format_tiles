@@ -4,6 +4,8 @@
 
 This is the "Tiles" course format plugin for Moodle.
 
+> **Community-Fork:** Dieser Stand ist ein gepflegter Fork für Moodle 5.1–5.3. Herkunft, Änderungen und Teststatus: siehe [FORK.md](FORK.md).
+
 ## Installation and Use
 This plugin should be installed in a sub directory of /course/format/ called tiles
 
