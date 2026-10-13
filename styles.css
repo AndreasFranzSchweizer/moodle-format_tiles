@@ -1882,10 +1882,11 @@ body.jsenabled.format-tiles #collapsiblesec0 {
     filter: grayscale(1);
 }
 .format-tiles .tile {
-    z-index: 2;
+    /* Keep tiles in normal stacking order so Moodle drawers/menus stay above them. */
+    z-index: auto;
 }
 .format-tiles .moveablesection {
-    z-index: 3;
+    z-index: auto;
 }
 .format-tiles .drawer-toggles .drawer-toggler {
     z-index: 3;
@@ -2018,7 +2019,6 @@ body.jsenabled.format-tiles #collapsiblesec0 {
 }
 
 @media (min-width: 768px) {
-    body.format-tiles.limitedwidth:not(.path-mod):not(.format-tiles-single-sec) #page.drawers .main-inner,
     .format-tiles .header-maxwidth {
         max-width: unset;
     }
