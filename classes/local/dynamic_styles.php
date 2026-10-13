@@ -68,7 +68,15 @@ class dynamic_styles {
         global $CFG, $PAGE;
         $courseid = $PAGE->course->id ?? 0;
         $data = self::data_for_template($courseid);
-        $m = new \Mustache_Engine();
+
+        if (class_exists('\\Mustache_Engine')) {
+            $m = new \Mustache_Engine();
+        } elseif (class_exists('\\Mustache\\Engine')) {
+            $m = new \Mustache\Engine();
+        } else {
+            throw new \coding_exception('No compatible Mustache engine class found.');
+        }
+
         return $m->render(
             file_get_contents("$CFG->dirroot/course/format/tiles/templates/dynamic_styles.mustache"),
             $data
